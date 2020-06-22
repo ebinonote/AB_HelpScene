@@ -33,11 +33,11 @@
 
 <dl>
 
-<dt>AB_Help Open</dt>
+  <dt>AB_Help Open</dt>
 
-<dd>ヘルプシーンを開きます。</dd>
+  <dd>ヘルプシーンを開きます。</dd>
 
-	<dt>AB_Help Show 1</dt>
+  <dt>AB_Help Show 1</dt>
 
   <dd>ＩＤ１番のヘルプを表示します。</dd>
 
