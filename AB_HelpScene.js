@@ -1,6 +1,6 @@
 ﻿// =============================================================================
 // AB_HelpScene.js
-// Version: 1.00
+// Version: 1.01
 // -----------------------------------------------------------------------------
 // Copyright (c) 2020 ヱビ
 // Released under the MIT license
@@ -12,7 +12,7 @@
 
 
 /*:
- * @plugindesc v1.00 画像でヘルプを表示する機能を追加します。
+ * @plugindesc v1.01 画像でヘルプを表示する機能を追加します。
  * @author ヱビ
  * 
  * 
@@ -114,6 +114,9 @@
  * 更新履歴
  * ============================================================================
  * 
+ * Version 1.01 
+ *   メニューの表示スイッチとメニュー有効化スイッチが変数を参照していたため、
+ *   スイッチに修正しました。
  * 
  * Version 1.00 公開
  *   
@@ -860,9 +863,9 @@
 	};
 
 	Window_MenuCommand.prototype.addABHelpCommand = function() {
-		var show = ABHelp_ShowSwitchID === 0 ? true : $gameVariables.value(ABHelp_ShowSwitchID);
+		var show = ABHelp_ShowSwitchID === 0 ? true : $gameSwitches.value(ABHelp_ShowSwitchID);
 		if (!show) return;
-		var enable = ABHelp_EnableSwitchID === 0 ? true : $gameVariables.value(ABHelp_EnableSwitchID);
+		var enable = ABHelp_EnableSwitchID === 0 ? true : $gameSwitches.value(ABHelp_EnableSwitchID);
 		this.addCommand(AB_Helptitle, 'ABHelp', enable);
 	};
 })();
